@@ -19,11 +19,11 @@ AWS EC2 deployment ready
 
 👨‍💻 Team Members
 
-Saravanan – Frontend & Chatbot Development
+**Saravanan** – Frontend & Chatbot Development
 
-Vasanth – AWS EC2 Deployment
+**Vasanth** – AWS EC2 Deployment
 
-Sindhu – Gemini API Integration
+**Sindhu** – Gemini API Integration
 
 🛠 Tech Stack
 
@@ -41,10 +41,11 @@ dotenv
 ent-specialist-chatbot/
 │
 ├── app.py
+
 ├── requirements.txt
+
 ├── README.md
-├── .gitignore
-└── .env
+
 
 ⚙️ Setup & Run Locally
 1️⃣ Clone repo
