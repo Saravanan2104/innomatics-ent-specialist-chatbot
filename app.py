@@ -4,14 +4,20 @@ from google import genai
 from google.genai import types
 from dotenv import load_dotenv
 
+# Load variables from .env
 load_dotenv()
 
-os.environ['GOOGLE_API_KEY'] = os.getenv('gemini_key')
+# Get the key and verify it exists
+api_key = os.getenv('gemini_key')
 
-# Initialize the client once in session_state
+if not api_key:
+    st.error("API Key not found! Please set 'gemini_key' in your .env file.")
+    st.stop()
+
+# Initialize the client with the key directly
 if 'client' not in st.session_state:
-    st.session_state.client = genai.Client()
-
+    st.session_state.client = genai.Client(api_key=api_key)
+    
 client = st.session_state.client
 
 system_prompt = """You are an ENT specialist.  provide solutions withing 2 or 3 lines.
@@ -51,3 +57,4 @@ if user_input:
     st.session_state.messages.append(('assistant',bot_reply))
 
     st.rerun()
+
