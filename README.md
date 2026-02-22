@@ -85,7 +85,7 @@ Run Streamlit app
 Configure security group (port 8501)
 
 📸 Demo
-
+http://13.127.206.195:8501
 
 
 ⚠️ Disclaimer
